@@ -1,5 +1,8 @@
+import Models.*;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        User newUser = new User();
+        newUser.setEmail("granaci55@gmail.com");
+        System.out.println(newUser.getEmail());
     }
 }
