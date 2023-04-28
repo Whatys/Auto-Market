@@ -1,22 +1,17 @@
-package Models;
+package model;
 
 public class User {
 
-    public int userID;
+    public Integer userID;
     public String fisrtName;
     public String lastName;
     public String email;
-    public byte age;
+    public Byte age;
 
     public User(){
-        this.userID = 0;
-        this.fisrtName = "first_name";
-        this.lastName = "last_name";
-        this.email = "example@mail.com";
-        this.age = (byte)0;
     }
 
-    public User(int userID, String fisrtName, String lastName, String email, byte age) {
+    public User(Integer userID, String fisrtName, String lastName, String email, Byte age) {
         this.userID = userID;
         this.fisrtName = fisrtName;
         this.lastName = lastName;
@@ -63,4 +58,17 @@ public class User {
     public void setAge(byte age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID=" + userID +
+                ", fisrtName='" + fisrtName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
+
+
