@@ -1,16 +1,9 @@
-package Models;
-public class Autoturisme extends Transport{
-    public Autoturisme() {
-        anulProducerii = 2023;
-        pret = 0;
-        kilometraj = 0;
-        marka = "Audi";
-        model = "A5";
-        cutiaDeViteza = "Automat";
-        combustibil = TipCombustibil.Disel;
+package model;
+public class Camioane extends Transport{
+    public Camioane() {
     }
 
-    public Autoturisme(int anulProducerii, double pret, int kilometraj, String marka, String model, String cutiaDeViteza, TipCombustibil combustibil) {
+    public Camioane(int anulProducerii, double pret, int kilometraj, String marka, String model, String cutiaDeViteza, TipCombustibil combustibil) {
         this.anulProducerii = anulProducerii;
         this.pret = pret;
         this.kilometraj = kilometraj;
@@ -20,7 +13,7 @@ public class Autoturisme extends Transport{
         this.combustibil = combustibil;
     }
 
-    public int getAnulProducerii() {
+    public Integer getAnulProducerii() {
         return anulProducerii;
     }
 
@@ -28,7 +21,7 @@ public class Autoturisme extends Transport{
         this.anulProducerii = anulProducerii;
     }
 
-    public double getPret() {
+    public Double getPret() {
         return pret;
     }
 
@@ -36,7 +29,7 @@ public class Autoturisme extends Transport{
         this.pret = pret;
     }
 
-    public int getKilometraj() {
+    public Integer getKilometraj() {
         return kilometraj;
     }
 
@@ -78,7 +71,7 @@ public class Autoturisme extends Transport{
 
     @Override
     public String toString() {
-        return "Autoturisme " +
+        return "Camioane " +
                 "anulProducerii=" + anulProducerii +
                 ", pret=" + pret +
                 ", kilometraj=" + kilometraj +

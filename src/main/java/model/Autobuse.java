@@ -1,13 +1,6 @@
-package Models;
+package model;
 public class Autobuse extends Transport{
     public Autobuse() {
-        anulProducerii = 2023;
-        pret = 0;
-        kilometraj = 0;
-        marka = "Ford";
-        model = "Tourneo Custom";
-        cutiaDeViteza = "Manual";
-        combustibil = TipCombustibil.Hybrid;
     }
 
     public Autobuse(int anulProducerii, double pret, int kilometraj, String marka, String model, String cutiaDeViteza, TipCombustibil combustibil) {
@@ -20,7 +13,7 @@ public class Autobuse extends Transport{
         this.combustibil = combustibil;
     }
 
-    public int getAnulProducerii() {
+    public Integer getAnulProducerii() {
         return anulProducerii;
     }
 
@@ -28,7 +21,7 @@ public class Autobuse extends Transport{
         this.anulProducerii = anulProducerii;
     }
 
-    public double getPret() {
+    public Double getPret() {
         return pret;
     }
 
@@ -36,7 +29,7 @@ public class Autobuse extends Transport{
         this.pret = pret;
     }
 
-    public int getKilometraj() {
+    public Integer getKilometraj() {
         return kilometraj;
     }
 
