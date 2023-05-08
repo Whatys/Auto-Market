@@ -1,12 +1,30 @@
 package model;
 
+import lombok.Data;
+
+import javax.annotation.processing.Generated;
+import javax.persistence.*;
+
+@Data
+@Entity
+@Table(name = "REGISTRATION_USERS")
 public class User {
 
-    public Integer userID;
-    public String fisrtName;
-    public String lastName;
-    public String email;
-    public Byte age;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Integer userID;
+    @Column(name = "username" , nullable = false)
+    private String username;
+    @Column(name = "first_name", nullable = false)
+    private String fisrtName;
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "age", nullable = false)
+    private Byte age;
 
     public User(){
     }

@@ -3,7 +3,8 @@ public class Autoturisme extends Transport{
     public Autoturisme() {
     }
 
-    public Autoturisme(int anulProducerii, double pret, int kilometraj, String marka, String model, String cutiaDeViteza, TipCombustibil combustibil) {
+    public Autoturisme(Integer Id,Integer anulProducerii, Double pret,Integer kilometraj, String marka, String model, String cutiaDeViteza, TipCombustibil combustibil) {
+        this.Id = Id;
         this.anulProducerii = anulProducerii;
         this.pret = pret;
         this.kilometraj = kilometraj;
@@ -12,7 +13,13 @@ public class Autoturisme extends Transport{
         this.cutiaDeViteza = cutiaDeViteza;
         this.combustibil = combustibil;
     }
+    public Integer getId() {
+        return Id;
+    }
 
+    public void setId(Integer id) {
+        Id = id;
+    }
     public Integer getAnulProducerii() {
         return anulProducerii;
     }
@@ -72,7 +79,8 @@ public class Autoturisme extends Transport{
     @Override
     public String toString() {
         return "Autoturisme " +
-                "anulProducerii=" + anulProducerii +
+                "Id=" + Id +
+                ", anulProducerii=" + anulProducerii +
                 ", pret=" + pret +
                 ", kilometraj=" + kilometraj +
                 ", marka='" + marka + '\'' +
