@@ -1,16 +1,34 @@
 package model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "TRANSPORT")
 public class Transport {
+    @Id @GeneratedValue
+    @OneToMany 
+    @Column(name = "IdTransport")
+    public Integer Id;
+    @Column(name = "anulProducerii")
     public Integer anulProducerii;
+    @Column(name = "pret")
     public Double pret;
+    @Column(name = "kilometraj")
     public Integer kilometraj;
+    @Column(name = "marka")
     public String marka;
+    @Column(name = "model")
     public String model;
+    @Column(name = "cutiaViteza")
     public String cutiaDeViteza;
+    @Column(name = "combustibil")
     public TipCombustibil combustibil;
 
-    public Transport(){
+    public Transport() {
     }
-    public Transport(Integer anulProducerii, Double pret, Integer kilometraj, String marka, String model, String cutiaDeViteza, TipCombustibil combustibil) {
+
+    public Transport(Integer Id , Integer anulProducerii, Double pret, Integer kilometraj, String marka, String model, String cutiaDeViteza, TipCombustibil combustibil) {
+        this.Id = Id;
         this.anulProducerii = anulProducerii;
         this.pret = pret;
         this.kilometraj = kilometraj;
@@ -18,6 +36,13 @@ public class Transport {
         this.model = model;
         this.cutiaDeViteza = cutiaDeViteza;
         this.combustibil = combustibil;
+    }
+    public Integer getId() {
+        return Id;
+    }
+
+    public void setId(Integer id) {
+        Id = id;
     }
 
     public Integer getAnulProducerii() {
