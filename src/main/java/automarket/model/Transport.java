@@ -21,7 +21,7 @@ public class Transport {
     @Column(name = "marka")
     private String marka;
 
-    @Column(name = "automarket.model")
+    @Column(name = "model")
     private String model;
 
     @Column(name = "cutiaViteza")
